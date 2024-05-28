@@ -1,65 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279654438&web_id=1279654438"></script>
- 
 
 <head>
     <meta charset="utf-8">
 
     <title>合成大几吧</title>
-
-    <!--http://www.html5rocks.com/en/mobile/mobifying/-->
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
-
-    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="format-detection" content="telephone=no">
-
-    <!-- force webkit on 360 -->
     <meta name="renderer" content="webkit" />
     <meta name="force-rendering" content="webkit" />
-    <!-- force edge on IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="msapplication-tap-highlight" content="no">
-
-    <!-- force full screen on some browser -->
     <meta name="full-screen" content="yes" />
     <meta name="x5-fullscreen" content="true" />
     <meta name="360-fullscreen" content="true" />
-
-    <!-- force screen orientation on some browser -->
     <meta name="screen-orientation" content="" />
     <meta name="x5-orientation" content="">
-
-    <!--fix fireball/issues/3568 -->
-    <!--<meta name="browsermode" content="application">-->
     <meta name="x5-page-mode" content="app">
-
-    <!--<link rel="apple-touch-icon" href=".png" />-->
-    <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
-
-
-    <!-- <script>
-        pushHistory();
-        window.addEventListener("popstate", function(e) {
-
-        }, false);
-        function pushHistory() {
-            var state = {
-                title: "",
-                url: window.location.href
-            };
-            window.history.pushState(state, state.title, state.url);
-        }
-    </script> -->
-    <!--  <script type="text/javascript">
-        var agent = navigator.userAgent.toLowerCase();
-        if(agent.indexOf("qbwebviewtype") > 0) {
-           location.href = "http://g.fromgame.com/game/462/";
-        }
-    </script> -->
-
     <link rel="stylesheet" type="text/css" href="style-mobile.css" />
 
 </head>
@@ -74,25 +34,19 @@
 
 
 
-    <div id="adContainer" style="display:none;position: absolute;top:0px;left: 0px;width:100%;height:100%;z-index:999;"></div>
-    <div id="loadingText" style="width:100%;display: none;text-align:center;position:absolute;top:45%;z-index:2;font-size:20px;color:#f99f0a">
+    <div id="adContainer" style="display:none;position: absolute;top:0px;left: 0px;width:100%;height:100%;z-index:999;">
+    </div>
+    <div id="loadingText"
+        style="width:100%;display: none;text-align:center;position:absolute;top:45%;z-index:2;font-size:20px;color:#f99f0a">
         正在偷几吧...0%
     </div>
 
     <div id="splash">
-        <!-- <div class="progress-bar stripes"> -->
-        <!-- <span style="width: 0%"></span> -->
-        <!-- </div> -->
     </div>
 
     <div id="loadingImg" style="top:45%;width: 100%;position:absolute; ">
         <img src="res/loading.gif" width="15%" height="15%" />
     </div>
-
-
-
-
-    <!--<div align="center" style="font-size: 10px;color: dimgrey">advertisement</div>-->
 
 
     <script src="src/settings.js" charset="utf-8"></script>
@@ -108,7 +62,6 @@
         judgeLanTitle();
 
         function judgeLanTitle() {
-            //        console.log("window.navigator.language",window.navigator.language);
 
             if (window.navigator.language == "zh-CN" || window.navigator.language == "zh-cn") {
                 document.title = "合成大几吧";
@@ -121,7 +74,7 @@
 
         var loadintT = document.getElementById("loadingText");
         var loadintGif = document.getElementById("loadingImg")
-        setTimeout(function() {
+        setTimeout(function () {
             loadintGif.remove();
             loadintT.style.display = ""
             updateLabView(0.1);
@@ -139,7 +92,7 @@
             var winHeight = document.documentElement.clientHeight;
             document.getElementById("canvasDiv").style.height = winHeight + "px";
         };
-        window.onload = function() {
+        window.onload = function () {
             document.getElementById("block-Box").style.display = "none";
         }
 
@@ -147,7 +100,7 @@
             if (timer != null) {
                 clearInterval(timer);
             }
-            timer = setInterval(function() {
+            timer = setInterval(function () {
                 tempSeconds++;
                 actualTotal();
                 var loadintT = document.getElementById("loadingText")
@@ -200,7 +153,6 @@
         }
 
 
-        /*setTimeout("ShowBannerAD()","2000");*/
     </script>
 
 
@@ -213,8 +165,7 @@
 
 
     <script type="text/javascript">
-        (function() {
-            // open web debugger console
+        (function () {
             if (typeof VConsole !== 'undefined') {
                 window.vConsole = new VConsole();
             }
@@ -229,7 +180,7 @@
             cocos2d.async = true;
             cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
 
-            var engineLoaded = function() {
+            var engineLoaded = function () {
                 document.body.removeChild(cocos2d);
                 cocos2d.removeEventListener('load', engineLoaded, false);
                 window.boot();
@@ -238,11 +189,16 @@
             document.body.appendChild(cocos2d);
         })();
     </script>
+    
 
+    <span>确定不来看看GitHub上的项目然后丢个star吗(星星眼) <br>
+        <a href="https://github.com/CHonesetDoPa/Mix-C/" target="opentype">点！这！里！</a></span>
 
-
-确定不来看看GitHub上的项目然后丢个star吗(星星眼) 
-<a href="https://github.com/CHonesetDoPa/Mix-C/"  target="opentype">点！这！里！</a>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        console.clear();
+    });
 
+</script>
 </html>
